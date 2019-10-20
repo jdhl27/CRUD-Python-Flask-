@@ -1,0 +1,44 @@
+<!-- Se utiliza Jinja2 como motor de plantillas web -->
+
+{% with messages = get_flashed_messages()%}
+{% if messages %}
+{% for message in messages %}
+    <p>{{message}}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<form action="/agregar" method="POST">
+
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="text" name="telefono" placeholder="Telefono" required>
+    <input type="text" name="correo" placeholder="Correo" required>
+    <button type="submit">
+        Guardar
+    </button>
+
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <td>Nombre</td>
+            <td>Telefono</td>
+            <td>Correo</td>
+            <td>Operaciones</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for contact in contacts %}
+        <tr>
+            <td>{{contact.1}}</td>
+            <td>{{contact.2}}</td>
+            <td>{{contact.3}}</td>
+            <td>
+                <a href="/editar/{{contact.0}}">Editar</a>
+                <a href="/eliminar/{{contact.0}}">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
