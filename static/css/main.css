@@ -1,0 +1,33 @@
+body {
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: "Candara Light";
+}
+
+.navbar a{
+   color: white !important;
+    font-family: "Candara Light";
+    border: none;
+}
+
+.formulario input{
+    background-color: #1E2325;
+    border-color: #1E2325;
+    color: white;
+}
+
+.formulario input:focus{
+    background-color: #1E2325;
+    color: white;
+}
+
+.cuadro{
+    background-color: #0b2239;
+}
+
+.titulosTable{
+    color:#ff9032;
+    text-align: center;
+    background-color: #0B2239;
+}
