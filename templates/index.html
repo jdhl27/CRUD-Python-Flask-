@@ -21,13 +21,13 @@
         <div class="card card-body">
             <form action="/agregar" method="POST" class="formulario">
                 <div class="form-group">
-                    <input type="text" name="nombre" placeholder="Nombre" class="form-control">
+                    <input type="text" name="nombre" placeholder="Nombre" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="telefono" placeholder="Telefono" class="form-control">
+                    <input type="text" name="telefono" placeholder="Telefono" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="correo" placeholder="Correo" class="form-control">
+                    <input type="text" name="correo" placeholder="Correo" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-success btn-block">Guardar</button>
@@ -39,10 +39,10 @@
         <table class="table table-stripe table-bordered bg-dark table-sm">
             <thead>
                 <tr>
-                    <td class="titulosTable">Nombre</td>
-                    <td class="titulosTable">Telefono</td>
-                    <td class="titulosTable">Correo</td>
-                    <td class="titulosTable">Operaciones</td>
+                    <td class="titulosTable">NOMBRE</td>
+                    <td class="titulosTable">TELÉFONO</td>
+                    <td class="titulosTable">CORREO</td>
+                    <td class="titulosTable">OPERACIONES</td>
                 </tr>
             </thead>
             <tbody>
@@ -51,9 +51,9 @@
                     <td>{{contact.1}}</td>
                     <td>{{contact.2}}</td>
                     <td>{{contact.3}}</td>
-                    <td>
+                    <td class="tdOperaciones">
                         <a href="/editar/{{contact.0}}" class="btn btn-secondary">Editar</a>
-                        <a href="/eliminar/{{contact.0}}" class="btn btn-danger">Eliminar</a>
+                        <a href="/eliminar/{{contact.0}}" class="btn btn-danger btn-delete">Eliminar</a>
                     </td>
                 </tr>
                 {% endfor %}

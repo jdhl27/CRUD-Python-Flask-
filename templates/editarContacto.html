@@ -6,7 +6,7 @@
 <div class="col-md-4 offset-md-4">
 
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>ESTAS EDITANDO A {{contact.1}} CON CODIGO {{contact.0}}</strong>
+        <strong>Estas editando a {{contact.1}} con código {{contact.0}}</strong>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
         </button>
@@ -17,16 +17,16 @@
     <div class="card card-body">
         <form action="/actualizar/{{contact.0}}" method="POST" class="formulario">
             <div class="form-group">
-                <input type="text" name="nombre" placeholder="Nombre" value="{{contact.1}}" class="form-control">
+                <input type="text" name="nombre" placeholder="Nombre" value="{{contact.1}}" class="form-control" required>
             </div>
             <div class="form-group">
-                <input type="text" name="telefono" placeholder="Telefono" value="{{contact.2}}" class="form-control">
+                <input type="text" name="telefono" placeholder="Telefono" value="{{contact.2}}" class="form-control" required>
             </div>
             <div class="form-group">
-                <input type="text" name="correo" placeholder="Correo" value="{{contact.3}}" class="form-control">
+                <input type="text" name="correo" placeholder="Correo" value="{{contact.3}}" class="form-control" required>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block boton">Editar</button>
+                <button type="submit" class="btn btn-success btn-block">Editar</button>
             </div>
         </form>
     </div>

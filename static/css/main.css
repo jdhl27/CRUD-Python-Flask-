@@ -29,5 +29,9 @@ body {
 .titulosTable{
     color:#ff9032;
     text-align: center;
-    background-color: #0B2239;
+    background-color: #213c46;
+}
+
+.tdOperaciones{
+    text-align: center;
 }
