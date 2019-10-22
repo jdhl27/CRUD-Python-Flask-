@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory
 from flask_mysqldb import MySQL
+import os
 
 app = Flask(__name__)
 
@@ -14,6 +15,11 @@ mysql = MySQL(app)
 app.secret_key = 'mysecretkey'
 
 # RUTAS
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/favicon.ico')
+
 @app.route('/')
 def Index():
     cur = mysql.connection.cursor(())
